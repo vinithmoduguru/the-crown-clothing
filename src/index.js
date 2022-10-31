@@ -7,13 +7,22 @@ import App from "./App"
 import { UserProvider } from "./contexts/user.context"
 
 import reportWebVitals from "./reportWebVitals"
+import { ProductsProvider } from "./contexts/products.context"
+import { ToggleCartProvider } from "./contexts/toggle-cart.context"
+import { AddToCartProvider } from "./contexts/add-to-cart.context"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <App />
+        <ProductsProvider>
+          {/* <AddToCartProvider> */}
+          <ToggleCartProvider>
+            <App />
+          </ToggleCartProvider>
+          {/* </AddToCartProvider> */}
+        </ProductsProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>
