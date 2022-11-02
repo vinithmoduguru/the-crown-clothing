@@ -10,10 +10,10 @@ import { UserContext } from "../../contexts/user.context"
 
 import "./navigation.styles.scss"
 import { signOutUser } from "../../utils/firebase/firebase.utils"
-import { ToggleCartContext } from "../../contexts/toggle-cart.context"
+import { CartContext } from "../../contexts/cart.context"
 const Navigation = () => {
   const { currentUser } = useContext(UserContext)
-  const { toggle } = useContext(ToggleCartContext)
+  const { isCartOpen } = useContext(CartContext)
   return (
     <Fragment>
       <div className="navigation">
@@ -36,7 +36,7 @@ const Navigation = () => {
           )}
           <CartIcon />
         </div>
-        {toggle && <CartDropDown />}
+        {isCartOpen && <CartDropDown />}
       </div>
       <Outlet />
     </Fragment>

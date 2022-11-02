@@ -8,8 +8,7 @@ import { UserProvider } from "./contexts/user.context"
 
 import reportWebVitals from "./reportWebVitals"
 import { ProductsProvider } from "./contexts/products.context"
-import { ToggleCartProvider } from "./contexts/toggle-cart.context"
-import { AddToCartProvider } from "./contexts/add-to-cart.context"
+import { CartProvider } from "./contexts/cart.context"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
@@ -17,11 +16,9 @@ root.render(
     <BrowserRouter>
       <UserProvider>
         <ProductsProvider>
-          {/* <AddToCartProvider> */}
-          <ToggleCartProvider>
+          <CartProvider>
             <App />
-          </ToggleCartProvider>
-          {/* </AddToCartProvider> */}
+          </CartProvider>
         </ProductsProvider>
       </UserProvider>
     </BrowserRouter>
