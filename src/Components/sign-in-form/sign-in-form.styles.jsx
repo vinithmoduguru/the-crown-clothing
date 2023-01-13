@@ -14,14 +14,3 @@ export const ButtonsContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `
-
-// .sign-in-container {
-//
-//
-//
-
-//   h2 {
-//   }
-//   .buttons-container {
-//   }
-// }
